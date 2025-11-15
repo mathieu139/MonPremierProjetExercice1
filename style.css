@@ -1,0 +1,116 @@
+/* ---------------------------------- */
+/* RÉINITIALISATION ET CONFIG GLOBALE */
+/* ---------------------------------- */
+
+/* Utilisation du 'border-box' pour tout. 
+  Cela rend la gestion des tailles (width/height) plus intuitive,
+  car le padding et la bordure sont inclus dans la taille.
+*/
+html {
+  box-sizing: border-box;
+  font-size: 16px; /* Base pour les unités 'rem' */
+}
+
+*, *:before, *:after {
+  box-sizing: inherit; /* Fait hériter le box-sizing à tous les éléments */
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------------------------------- */
+/* STYLES DU CORPS (BODY)             */
+/* ---------------------------------- */
+
+body {
+  /* Pile de polices "système" : utilise la police native de l'OS 
+    de l'utilisateur. C'est rapide et familier.
+  */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  
+  line-height: 1.6; /* Hauteur de ligne pour une meilleure lisibilité */
+  background-color: #f4f4f4; /* Fond gris très clair */
+  color: #333; /* Couleur de texte principale (gris foncé) */
+  padding: 20px;
+}
+
+/* ---------------------------------- */
+/* STRUCTURE ET CONTENEUR             */
+/* ---------------------------------- */
+
+/* Une classe 'container' est très fréquente.
+  Elle centre le contenu et lui donne une largeur maximale
+  pour qu'il ne s'étire pas sur tout l'écran.
+*/
+.container {
+  max-width: 1100px; /* Largeur max */
+  margin: 0 auto; /* Centre horizontalement */
+  padding: 20px;
+  background-color: #ffffff; /* Fond blanc pour le contenu */
+  border-radius: 8px; /* Coins arrondis */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Ombre légère */
+}
+
+/* ---------------------------------- */
+/* TYPOGRAPHIE (TEXTES)               */
+/* ---------------------------------- */
+
+h1, h2, h3 {
+  line-height: 1.2;
+  margin-bottom: 15px; /* Espace sous les titres */
+  color: #1a2533; /* Couleur de titre plus sombre */
+}
+
+h1 {
+  font-size: 2.5rem; /* 40px */
+}
+
+h2 {
+  font-size: 2rem; /* 32px */
+}
+
+h3 {
+  font-size: 1.5rem; /* 24px */
+}
+
+p {
+  margin-bottom: 1rem; /* Espace sous les paragraphes (16px) */
+}
+
+/* ---------------------------------- */
+/* LIENS (A)                          */
+/* ---------------------------------- */
+
+a {
+  color: #007bff; /* Bleu standard pour les liens */
+  text-decoration: none; /* Enlève le soulignement par défaut */
+  transition: color 0.2s ease-in-out; /* Petite animation au survol */
+}
+
+/* Au survol de la souris */
+a:hover {
+  color: #0056b3; /* Bleu plus foncé */
+  text-decoration: underline; /* Ajoute le soulignement au survol */
+}
+
+/* ---------------------------------- */
+/* ÉLÉMENTS UTILES (CLASSES)          */
+/* ---------------------------------- */
+
+/* Une classe de base pour un bouton */
+.button {
+  display: inline-block;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
